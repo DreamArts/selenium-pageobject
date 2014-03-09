@@ -1,0 +1,38 @@
+{
+  "name": "selenium-pageobject",
+  "version": "1.0.0-beta",
+  "description": "A lightweight pageobject implementation for selenium's webdriverjs",
+  "main": "lib/main.js",
+  "keywords": [
+    "pageobject",
+    "automation",
+    "selenium",
+    "testing",
+    "webdriver",
+    "webdriverjs"
+  ],
+  "author": {
+    "name": "James Killick",
+    "email": "me@jameskillick.com"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+   "bugs": {
+    "url": "https://github.com/overnightFailure/selenium-pageobject/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overnightFailure/selenium-pageobject"
+  },
+  "dependencies" : {
+    "selenium-webdriver" : "2.40.0",
+    "underscore" : "1.9.0",
+    "underscore.string" : "2.3.3"
+  },
+  "devDependencies": {
+    "mocha": "~1.10.0",
+    "chai" : "~1.9.0"
+  }
+}
