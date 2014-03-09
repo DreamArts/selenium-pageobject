@@ -2,7 +2,7 @@
 
 var chai = require('chai'), expect = chai.expect,
     wd = require('selenium-webdriver'),
-    PageNavigator = require('pageobjectjs').PageNavigator;
+    PageNavigator = require('selenium-pageobject').PageNavigator;
 
 describe("PageNavigator", function() {
     var driver;

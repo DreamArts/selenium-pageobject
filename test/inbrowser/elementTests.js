@@ -2,7 +2,7 @@
 
 var chai = require('chai'), expect = chai.expect,
     wd = require('selenium-webdriver'), By = wd.By,
-    elements = require('pageobjectjs').elements;
+    elements = require('selenium-pageobject').elements;
 
 describe("Element", function() {
     

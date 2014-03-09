@@ -1,7 +1,7 @@
 "use strict";
 
 var chai = require('chai'), expect = chai.expect,
-    Workflow = require('pageobjectjs').Workflow;
+    Workflow = require('selenium-pageobject').Workflow;
 
 describe("Workflow", function() {
 

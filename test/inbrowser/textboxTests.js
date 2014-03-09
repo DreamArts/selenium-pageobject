@@ -2,7 +2,7 @@
 
 var chai = require('chai'), expect = chai.expect,
     wd = require('selenium-webdriver'), By = wd.By,
-    elements = require('pageobjectjs').elements;
+    elements = require('selenium-pageobject').elements;
 
 describe("TextBox", function() {
     var driver;
@@ -29,7 +29,7 @@ describe("TextBox", function() {
         var tb = new elements.TextBox(driver, By.id('textbox_with_value'));
         
         tb.getValue().then(function (text) {
-            expect(text).to.be.equal('pageobjectjs');
+            expect(text).to.be.equal('pageobject');
             done();
         });
     });
