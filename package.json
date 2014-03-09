@@ -1,7 +1,7 @@
 {
   "name": "selenium-pageobject",
   "version": "1.0.1-beta",
-  "description": "A lightweight pageobject implementation for selenium's webdriverjs",
+  "description": "A lightweight pageobject library for selenium's webdriverjs",
   "main": "lib/main.js",
   "keywords": [
     "pageobject",
