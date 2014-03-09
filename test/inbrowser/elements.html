@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test page</title>
+</head>
+<body>
+    <h1>Multi Select Lists</h1>
+    <select id="multiselectList_none_selected" multiple>
+        <option value="AMS">Amsterdam</option>
+        <option value="BCN">Barcelona</option>
+        <option value="GIB">Gibraltar</option>
+        <option value="LGW">London Gatwick</option>
+        <option>Madrid</option>
+        <option value="VRN">Verona</option>
+    </select>
+    <select id="multiselectList_one_selected" multiple>
+        <option value="AMS">Amsterdam</option>
+        <option value="BCN">Barcelona</option>
+        <option value="GIB" selected="selected">Gibraltar</option>
+        <option value="LGW">London Gatwick</option>
+        <option>Madrid</option>
+        <option value="VRN">Verona</option>
+    </select>
+    <select id="multiselectList_three_selected" multiple>
+        <option value="AMS" selected="selected">Amsterdam</option>
+        <option value="BCN">Barcelona</option>
+        <option value="GIB" selected="selected">Gibraltar</option>
+        <option value="LGW">London Gatwick</option>
+        <option>Madrid</option>
+        <option value="VRN" selected="selected">Verona</option>
+    </select>
+    <select id="multiselectList_noValue_selected" multiple>
+        <option value="AMS">Amsterdam</option>
+        <option value="BCN">Barcelona</option>
+        <option value="GIB">Gibraltar</option>
+        <option value="LGW">London Gatwick</option>
+        <option selected="selected">Madrid</option>
+        <option value="VRN">Verona</option>
+    </select>
+
+    <h1>Select Lists</h1>
+    <select id="selectList_second_selected">
+        <option value="AMS">Amsterdam</option>
+        <option value="BCN" selected="selected">Barcelona</option>
+        <option value="GIB">Gibraltar</option>
+        <option value="LGW">London Gatwick</option>
+        <option>Madrid</option>
+        <option value="VRN">Verona</option>
+    </select>
+    <select id="selectList_noValue_selected">
+        <option value="AMS">Amsterdam</option>
+        <option value="BCN">Barcelona</option>
+        <option value="GIB">Gibraltar</option>
+        <option value="LGW">London Gatwick</option>
+        <option selected="selected">Madrid</option>
+        <option value="VRN">Verona</option>
+    </select>
+
+    <h1>Checkboxes</h1>
+    <label for="checkbox_unchecked"><input id="checkbox_unchecked" type="checkbox" />not checked</label>
+    <br />
+    <label for="checkbox_checked"><input id="checkbox_checked" type="checkbox" checked />checked</label>
+
+    <h1>Radio buttons</h1>
+    <label for="radiobutton_unselected"><input id="radiobutton_unselected" type="radio" />not selected</label>
+    <label for="radiobutton_selected"><input id="radiobutton_selected" type="radio" checked/>selected</label>
+
+    <h1>Text boxes</h1>
+    <input id="textbox_empty" type="text" />
+    <input id="textbox_with_value" type="text" value="pageobjectjs"/>
+
+    <h1>The magical appearing element</h1>
+    <div id="host"></div>
+
+    <script type="text/javascript">
+        setTimeout(function () {
+            var link = document.createElement('a');
+            link.innerHTML = 'Github';
+            link.setAttribute('id', 'link');
+            link.setAttribute('href', 'http://www.github.com');
+            link.setAttribute('style', 'display: none');
+            document.getElementById('host').appendChild(link);
+
+            setTimeout(function () {
+                document.getElementById('link').setAttribute('style', 'display: block');
+            }, 500);
+
+        }, 500);
+    </script>
+
+    <h1>Elements</h1>
+    <p id="exists">This element already exists in the page</p>
+
+</body>
+</html>
