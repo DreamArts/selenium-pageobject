@@ -1,6 +1,6 @@
 {
   "name": "selenium-pageobject",
-  "version": "1.0.0-beta",
+  "version": "1.0.1-beta",
   "description": "A lightweight pageobject implementation for selenium's webdriverjs",
   "main": "lib/main.js",
   "keywords": [
@@ -28,7 +28,7 @@
   },
   "dependencies" : {
     "selenium-webdriver" : "2.40.0",
-    "underscore" : "1.9.0",
+    "underscore" : "1.6.0",
     "underscore.string" : "2.3.3"
   },
   "devDependencies": {
