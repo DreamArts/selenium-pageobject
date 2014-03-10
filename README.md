@@ -65,15 +65,9 @@ function MyPage(driver) {
     this._ui = new MyPageModel(driver, By.tagName('html'));
 }
 
-MyPage.prototype.setUsername = function (value) {
-    return this._ui.username.setValue(value);
-};
-
-MyPage.prototype.setPassword = function (value) {
-    return this._ui.password.setValue(value);
-};
-
-MyPage.prototype.login = function (value) {
+MyPage.prototype.login = function (username, password) {
+    this._ui.username.setValue(username);
+    this._ui.password.setValue(password);
     return this._ui.loginButton.click();
 };
 
@@ -104,9 +98,7 @@ describe("MyPage", function() {
         var myPage = new MyPage(driver);
 
         pageNavigator.visit(url).then(function () {
-            myPage.setUsername('JohnSmith');
-            myPage.setPassword('password');
-            myPage.login().then(function () {
+            myPage.login('JohnSmith', 'password').then(function () {
                 // expect something
             });
         }).then(function () {
