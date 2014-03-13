@@ -162,8 +162,8 @@ describe("Workflow", function() {
         wf.steps.push({ id: '1', action: function () { count++; } });
         wf.steps.push({ id: '2', action: function () { count++; } });
         
-        wf.on('2', function(po, halt) {
-            halt();
+        wf.on('2', function(po) {
+            return this.stopWorkflow();
         });
 
         wf.run().then(function () {
@@ -207,7 +207,7 @@ describe("Workflow", function() {
         var wf = new Workflow();
 
         wf.steps.push({ id: '1', action: function () { throw new Error('Should not execute'); } });
-        wf.on('1', function (po, halt) { halt(); });
+        wf.on('1', function (po) { return this.haltWorkflow(); });
 
         wf.run().then(function () { done(); });
     });
